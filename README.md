@@ -11,7 +11,7 @@ Using Erlang's Actor Model, we've created a simulation of bitcoin mining. To min
 
 ## Commands to run the program 
 
-- To run Server(server.erl) instance: '_erl -name server@{ipAddress} -setcookie {cookieName}'-
+- To run Server(server.erl) instance: '_erl -name server@{ipAddress} -setcookie {cookieName}_'
 
     - e.g.: '_erl -name server@10.20.170.60 -setcookie project_'
     - Compile server.erl using _c(server)_. This compiles the server side implementation of the code.
