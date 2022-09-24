@@ -69,8 +69,7 @@ We have defined the ideal number of processes to run as = _No.of Cores ^ 4_. Thi
 **The result of running the program for input 4**
 
 We ran our program for _4 leading zeroes_, trying to find _50 bitcoins_ and spawned _10,000 actors_ receiving the following metrics :
-
-![](RackMultipart20220924-1-obax26_html_6150ec4191a974f8.png)
+![1](https://user-images.githubusercontent.com/70634373/192115790-e9525294-33f1-4936-bf3c-1123c19bb6a8.png)
 
 **The ratio of CPU time to REAL time for the program**
 
@@ -82,7 +81,8 @@ CPU Utilization: CPU time/ Run Time 1.9038265418761613
 
 **The coin with the most 0s mined by our program**.
 
-We mined coins with _8 leading zeroes_ resulting in _2 coins_ within_~5 hours_. We executed this on a Macbook Pro with M1 pro chip with configurations: 10-core CPU and 14-core GPU. ![](RackMultipart20220924-1-obax26_html_5ee141d1f544ac53.png)
+We mined coins with _8 leading zeroes_ resulting in _2 coins_ within_~5 hours_. We executed this on a Macbook Pro with M1 pro chip with configurations: 10-core CPU and 14-core GPU. 
+![2](https://user-images.githubusercontent.com/70634373/192115729-fd99b350-3649-4341-88ec-6bb167226c83.png)
 
 **The largest number of working machines we were able to run your code with.**
 
@@ -94,4 +94,6 @@ The client id of the 3 machines are:
 2. **\<9660.88.0\>**
 3. **\<9661.88.0\>**
 
-![](RackMultipart20220924-1-obax26_html_ea470fb1db851104.png)
+![3](https://user-images.githubusercontent.com/70634373/192115615-81697851-9f2a-438e-b425-3657fdcdbf27.png)
+
+
