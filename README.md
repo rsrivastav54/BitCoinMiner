@@ -1,4 +1,4 @@
-# COP5616 Bitcoin Mining project
+# COP5615 Bitcoin Mining project
 
 ## Team Members
 
