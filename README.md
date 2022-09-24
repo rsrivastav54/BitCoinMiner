@@ -11,11 +11,11 @@ Using Erlang's Actor Model, we've created a simulation of bitcoin mining. To min
 
 ## Commands to run the program 
 
-- To run Server(server.erl) instance: '_erl -name server@{ipAddress} -setcookie {cookieName}'_
+- To run Server(server.erl) instance: '_erl -name server@{ipAddress} -setcookie {cookieName}'-
 
-    - e.g.: '_erl -name server@10.20.170.60 -setcookie project'_
-    - Compile server.erl using c(server). This compiles the server side implementation of the code.
-    - Compile client.erl using c(client). This compiles the client side implementation of the code for distributed modeling.
+    - e.g.: '_erl -name server@10.20.170.60 -setcookie project_'
+    - Compile server.erl using _c(server)_. This compiles the server side implementation of the code.
+    - Compile client.erl using _c(client)_. This compiles the client side implementation of the code for distributed modeling.
     - once you have entered the erl shell, to start the server: '_server:start()._'
       - Next '_Enter number of 0s to mine for bitcoin :_ '
       - Next '_Enter number of coins to mine :_ '
@@ -24,7 +24,7 @@ Using Erlang's Actor Model, we've created a simulation of bitcoin mining. To min
 
 - Distributed Implementation of the Project:
     - Start the server using the above steps, then create client nodes.
-    - To create Client(client.erl) node: '_erl -name {clientName}@{ipAddress} -setcookie {cookieName}__'_
+    - To create Client(client.erl) node: '_erl -name {clientName}@{ipAddress} -setcookie {cookieName}_'
       - e.g.: '_erl -name client@10.20.170.60 -setcookie project'_
       - To test the distributed implementation, enter 0 in Number of workers to spawn on the server side since we don't want          the server to mine coins by itself and want the client to mine.
       - Once you have entered the erl shell, to start the client: '_client:start("{ip\_address\_of\_server}")._'
@@ -66,12 +66,13 @@ In our program we give the user the option to enter the number of workers to spa
 
 We have defined the ideal number of processes to run as = _No.of Cores ^ 4_. This ensures that all the cores are used efficiently to mine bitcoins in a faster manner.
 
-**The result of running the program for input 4**
+**The result of running the program for input 4:**
 
 We ran our program for _4 leading zeroes_, trying to find _50 bitcoins_ and spawned _10,000 actors_ receiving the following metrics :
+
 ![1](https://user-images.githubusercontent.com/70634373/192115790-e9525294-33f1-4936-bf3c-1123c19bb6a8.png)
 
-**The ratio of CPU time to REAL time for the program**
+**The ratio of CPU time to REAL time for the program:**
 
 Total clock time: 97475.792 ms
 
@@ -79,12 +80,12 @@ Total CPU time: 185577 ms
 
 CPU Utilization: CPU time/ Run Time 1.9038265418761613
 
-**The coin with the most 0s mined by our program**.
+**The coin with the most 0s mined by our program:**.
 
-We mined coins with _8 leading zeroes_ resulting in _2 coins_ within_~5 hours_. We executed this on a Macbook Pro with M1 pro chip with configurations: 10-core CPU and 14-core GPU. 
+We mined coins with _8 leading zeroes_ resulting in _2 coins_ within ~5 hours. We executed this on a Macbook Pro with M1 pro chip with configurations: 10-core CPU and 14-core GPU. 
 ![2](https://user-images.githubusercontent.com/70634373/192115729-fd99b350-3649-4341-88ec-6bb167226c83.png)
 
-**The largest number of working machines we were able to run your code with.**
+**The largest number of working machines we were able to run our code with:**
 
 We were able to run our code on _3 different systems_ and they all were able to mine bitcoins simultaneously. This can also be scaled up to multiple different machines.
 
