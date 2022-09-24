@@ -1,4 +1,4 @@
-# COP5615 Bitcoin Mining project
+# COP5615 Bitcoin Mining Project
 
 ## Team Members
 
@@ -16,11 +16,11 @@ Using Erlang's Actor Model, we've created a simulation of bitcoin mining. To min
     - e.g.: '_erl -name server@10.20.170.60 -setcookie project_'
     - Compile server.erl using _c(server)_. This compiles the server side implementation of the code.
     - Compile client.erl using _c(client)_. This compiles the client side implementation of the code for distributed modeling.
-    - once you have entered the erl shell, to start the server: '_server:start()._'
+    - Once you have entered the erl shell, to start the server: '_server:start()._'
       - Next '_Enter number of 0s to mine for bitcoin :_ '
       - Next '_Enter number of coins to mine :_ '
       - Next '_Enter number of workers to spawn :_ '
-    - server can mine coins without any active client nodes
+    - Server can mine coins without any active client nodes
 
 - Distributed Implementation of the Project:
     - Start the server using the above steps, then create client nodes.
@@ -36,7 +36,7 @@ Using Erlang's Actor Model, we've created a simulation of bitcoin mining. To min
 
 - **Server.erl**
 
-The server.erl is started with the number of leading zeros (Z\_count), number of coins to mine (Max\_Coins\_Count) and the number of workers on each system (Miner\_count). The server spawns workers (actors) to mine coins and then waits to receive messages either from the spawned actors that a coin is found, which the server will print, or from a client that wishes to participate in the mining. Any number of clients may connect. These actors on the client behave the same as actors on the server and will send a message to the server when a coin is found. The workers are designed to continue mining until the server finds the total number of coins given by the user.
+The server.erl is started with the number of leading zeros (Z_count), number of coins to mine (Max_Coins_Count) and the number of workers on each system (Miner_count). The server spawns workers (actors) to mine coins and then waits to receive messages either from the spawned actors that a coin is found, which the server will print, or from a client that wishes to participate in the mining. Any number of clients may connect. These actors on the client behave the same as actors on the server and will send a message to the server when a coin is found. The workers are designed to continue mining until the server finds the total number of coins given by the user.
 
 - **Client.erl**
 
@@ -46,11 +46,11 @@ Client takes in the server IP address as the argument and a connection is establ
 
 - The server will take input from the user regarding the number of zeroes to classify a coin as a bitcoin, number of coins that the user wants to mine and the number of worker nodes that the user wants to spawn.
 
-- The server spawns workers/actors depending on the input given by the user using the spawn\_many() function. The workers spawned on the server begin to mine bitcoins.
+- The server spawns workers/actors depending on the input given by the user using the spawn_many() function. The workers spawned on the server begin to mine bitcoins.
 
 - If a worker process shuts down, the work assigned to it will be delegated by the server to some other remote worker active at that time.
 
-- The server will start generating random strings that will append to "rishabhsrivastav;" and the workers will start mining the bitcoins using start\_mining() function. If the worker finds a bitcoin, it sends a message to the server informing it found one and the server then prints the bitcoin.
+- The server will start generating random strings that will append to "rishabhsrivastav;" and the workers will start mining the bitcoins using start_mining() function. If the worker finds a bitcoin, it sends a message to the server informing it found one and the server then prints the bitcoin.
 
 - The distributed implementation can be executed by creating client nodes using steps mentioned above. Enter the number of workers to spawn as 0 as now we'll set up individual client nodes by following steps mentioned above. Once a node is created and you're inside the shell, type _**client:start("\<ipAddress\>").**_ and the client then informs the server that the connection has been established and starts to mine coins.
 
