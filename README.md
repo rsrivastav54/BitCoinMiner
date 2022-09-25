@@ -68,17 +68,32 @@ We have defined the ideal number of processes to run as = _No.of Cores ^ 4_. Thi
 
 **The result of running the program for input 4:**
 
-We ran our program for _4 leading zeroes_, trying to find _50 bitcoins_ and spawned _10,000 actors_ receiving the following metrics :
+We ran our program for _4 leading zeroes_, trying to find _50 bitcoins_ and spawned _10,000 actors_ receiving the following metrics:
 
+Output received on Macbook pro (Specs: 10 core CPU, M1 pro chip):
 ![1](https://user-images.githubusercontent.com/70634373/192115790-e9525294-33f1-4936-bf3c-1123c19bb6a8.png)
 
+Output received on Acer Nitro Windows 10 Laptop (Specs: 8 cores, i7-9th Gen Chip):
+![combined](https://user-images.githubusercontent.com/70634373/192123077-108fcce1-c60e-4034-a996-936c4cfd0051.jpg)
+
+
 **The ratio of CPU time to REAL time for the program:**
+
+*MacBook Pro M1 Pro Chipset:*
 
 Total clock time: 97475.792 ms
 
 Total CPU time: 185577 ms
 
 CPU Utilization: CPU time/ Run Time 1.9038265418761613
+
+*Windows 10 Acer Nitro 8 core i7-9th gen Chipset:*
+
+Total clock time: 14154.854 ms
+
+Total CPU time: 101828 ms
+
+CPU Utilization: CPU time/ Run Time 7.193857315660056
 
 **The coin with the most 0s mined by our program:**.
 
